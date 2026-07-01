@@ -1,0 +1,13 @@
+# OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# PHP
+vendor/
+*.log
+
+# Local secrets (uncomment if you move credentials out of config.php)
+# includes/config.local.php

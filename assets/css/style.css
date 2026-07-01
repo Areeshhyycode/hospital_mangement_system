@@ -1,0 +1,91 @@
+:root{
+  --bg:#f4f6fb; --card:#fff; --ink:#1f2937; --muted:#6b7280;
+  --brand:#0d6efd; --brand-d:#0a58ca; --border:#e5e7eb;
+  --green:#16a34a; --red:#dc2626; --amber:#d97706;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);color:var(--ink);font-size:14px}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Topbar */
+.topbar{display:flex;justify-content:space-between;align-items:center;
+  background:#0b3d91;color:#fff;padding:12px 20px}
+.topbar .brand{font-weight:700;font-size:18px}
+.userbox{display:flex;align-items:center;gap:12px;font-size:13px}
+
+/* Layout */
+.layout{display:flex;min-height:calc(100vh - 96px)}
+.sidebar{width:210px;background:#0f172a;padding:14px 10px;flex-shrink:0}
+.navlink{display:flex;gap:10px;align-items:center;color:#cbd5e1;
+  padding:10px 12px;border-radius:8px;margin-bottom:4px}
+.navlink:hover{background:#1e293b;color:#fff;text-decoration:none}
+.navlink.active{background:var(--brand);color:#fff}
+.content{flex:1;padding:22px 26px;max-width:1100px}
+.page-title{margin:0 0 18px;font-size:22px}
+
+/* Cards / stats */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:22px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px}
+.card .num{font-size:30px;font-weight:700;color:var(--brand)}
+.card .lbl{color:var(--muted);font-size:13px;margin-top:4px}
+
+/* Panels */
+.panel{background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:18px;margin-bottom:22px}
+.panel h2{margin:0 0 14px;font-size:16px}
+.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.panel-head h2{margin:0}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--border)}
+th{color:var(--muted);font-weight:600;background:#f9fafb}
+tr:hover td{background:#f9fafb}
+.empty{color:var(--muted);padding:16px;text-align:center}
+
+/* Forms */
+form.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 16px}
+form.grid .full{grid-column:1 / -1}
+label{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}
+input,select,textarea{width:100%;padding:8px 10px;border:1px solid var(--border);
+  border-radius:8px;font-size:14px;font-family:inherit;background:#fff}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);border-color:var(--brand)}
+textarea{min-height:70px;resize:vertical}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--brand);color:#fff;border:none;
+  padding:9px 16px;border-radius:8px;cursor:pointer;font-size:14px}
+.btn:hover{background:var(--brand-d);text-decoration:none;color:#fff}
+.btn-sm{padding:5px 10px;font-size:12px}
+.btn-secondary{background:#e5e7eb;color:#111}
+.btn-secondary:hover{background:#d1d5db;color:#111}
+.btn-danger{background:var(--red)}
+.btn-danger:hover{background:#b91c1c}
+
+/* Badges */
+.badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:600}
+.badge-scheduled{background:#dbeafe;color:#1e40af}
+.badge-completed{background:#dcfce7;color:#166534}
+.badge-cancelled,.badge-no_show{background:#fee2e2;color:#991b1b}
+.badge-paid{background:#dcfce7;color:#166534}
+.badge-unpaid{background:#fee2e2;color:#991b1b}
+.badge-partial{background:#fef3c7;color:#92400e}
+
+/* Alerts */
+.alert{padding:11px 14px;border-radius:8px;margin-bottom:16px;font-size:13px}
+.alert-success{background:#dcfce7;color:#166534;border:1px solid #86efac}
+.alert-error{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5}
+
+/* Login */
+.login-wrap{max-width:360px;margin:8vh auto;background:#fff;padding:28px;
+  border-radius:14px;border:1px solid var(--border)}
+.login-wrap h1{margin:0 0 4px;font-size:22px}
+.login-wrap p{color:var(--muted);margin:0 0 20px;font-size:13px}
+.login-wrap label{margin-top:12px}
+
+.actions{display:flex;gap:6px}
+.footer{text-align:center;color:var(--muted);padding:14px}
+.row-actions form{display:inline}
+.hint{color:var(--muted);font-size:12px;margin-top:4px}
