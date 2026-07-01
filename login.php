@@ -47,7 +47,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <input type="password" name="password" required>
       <button class="btn" style="width:100%;margin-top:18px" type="submit">Sign in</button>
     </form>
-    <p class="hint" style="margin-top:16px">Default: <code>admin</code> / <code>admin123</code> (run install.php first)</p>
   </div>
 </body>
 </html>
